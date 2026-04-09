@@ -1,0 +1,145 @@
+.phase-card {
+  background: linear-gradient(135deg, rgba(222, 240, 255, 0.4) 0%, rgba(255, 255, 255, 0.8) 100%);
+  border: 0.89px solid var(--color-border);
+  border-radius: var(--radius-card);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+  box-shadow: var(--shadow-card);
+}
+
+.phase-card:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1), 0 2px 4px rgba(0,0,0,0.06);
+  transform: translateY(-1px);
+}
+
+.dashboard-root.dark .phase-card {
+  background: linear-gradient(135deg, rgba(20, 35, 55, 0.6) 0%, rgba(25, 40, 60, 0.85) 100%);
+  border-color: var(--color-border);
+}
+
+.phase-card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.phase-card-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background-color: var(--color-primary-light);
+  border-radius: 8px;
+  flex-shrink: 0;
+  color: var(--color-primary);
+  padding: 12px;
+}
+
+.dashboard-root.dark .phase-card-icon {
+  background-color: rgba(113, 216, 197, 0.2);
+  color: var(--color-primary);
+}
+
+.phase-card-title-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+}
+
+.phase-label {
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  line-height: 16px;
+  letter-spacing: 0.02em;
+}
+
+.phase-title {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: var(--color-text-primary);
+  margin: 0;
+  line-height: 28px;
+  letter-spacing: 0.02em;
+}
+
+.phase-description {
+  font-size: 14px;
+  color: var(--color-text-secondary);
+  margin: 0;
+  line-height: 20px;
+}
+
+.phase-items {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.phase-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px;
+  background: rgba(255, 255, 255, 0.6);
+  border: 0.89px solid var(--color-border);
+  border-radius: var(--radius-badge);
+  transition: background-color 0.15s ease;
+  cursor: pointer;
+  min-height: 39.5px;
+}
+
+.phase-item:hover {
+  background: rgba(255, 255, 255, 0.85);
+}
+
+.dashboard-root.dark .phase-item {
+  background: rgba(30, 50, 70, 0.5);
+  border-color: var(--color-border);
+}
+
+.dashboard-root.dark .phase-item:hover {
+  background: rgba(40, 65, 90, 0.7);
+}
+
+.phase-item-name {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-text-primary);
+  line-height: 20px;
+  flex: 1;
+  padding-right: 8px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.phase-item-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2.88px 9px;
+  background: var(--color-badge-bg);
+  border: 0.89px solid var(--color-badge-border);
+  border-radius: var(--radius-badge);
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--color-text-secondary);
+  line-height: 16px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.dashboard-root.dark .phase-item-badge {
+  background: var(--color-badge-bg);
+  border-color: var(--color-badge-border);
+  color: var(--color-text-secondary);
+}
