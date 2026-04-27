@@ -1,9 +1,9 @@
 import React from 'react';
-import Dashboard from './components/Dashboard/Dashboard';
-import './index.css';
+import Router from './router';
+import './styles/dashboard.css';
 
 const App: React.FC = () => {
-  return <Dashboard />;
+  return <Router />;
 };
 
 export default App;
